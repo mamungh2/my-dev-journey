@@ -1,0 +1,207 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* -------------------------------------------- */
+
+
+/* shared styles */
+.container {
+    max-width: 1140px; /* Standard container width */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;  /* Gutters for content */
+    padding-right: 15px;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.section-title {
+    color: #181818;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.section-description {
+    color: #757575;
+    font-size: 18px;
+}
+
+/* ----------------------- */
+
+
+.secondary-bg {
+    background-color: #FFF8F3;
+}
+
+
+/* header & navbar styles */
+.site-header {
+    background-image: url('../images/developer.png'), url('../images/header_bg.png');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky; /* makes the header stick to the top on scroll */
+    top: 0;
+    z-index: 100; /* Ensures header stays above other content */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 200px;
+}
+/* ------------------------------------------------------------------ */
+
+
+/* site brand styling */
+.nav-brand a {
+    text-decoration: none;
+}
+
+.nav-brand h3 {
+    font-weight: 800;
+    font-size: 45px;
+    color: #181818;
+}
+
+.nav-brand .brand-letter-highlight {
+    color: #FD6E0A;
+}
+
+.nav-brand a:hover h3 {
+    color: #555;
+}
+
+.nav-brand a:hover .brand-letter-highlight {
+    color: darkred;
+}
+
+/* --------------------------------------------- */
+
+
+/* navigation links styling */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-right: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #474747;
+}
+
+/* ------------------------- */
+
+
+/* primary button styles */
+.btn-primary {
+    background-color: #FD6E0A;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* -------------------------------- */
+
+/* outline button styles */
+.btn-outline {
+    color: #FD6E0A;
+    background-color: transparent;
+    border: 2px solid #FD6E0A;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 18px 35px;
+}
+
+/* banner styles */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 35px 0 200px;
+}
+
+.banner-content {
+    max-width: 585px;
+}
+
+.banner-greeting {
+    color: #474747;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.banner-title {
+    color: #181818;
+    font-size: 85px;
+    font-weight: 700;
+}
+
+.banner-description {
+    color: #757575;
+}
+
+.banner-profile-pic {
+    width: 584px;
+}
+
+/* ------------------------ */
+
+
+/* main styles */
+.site-main {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* ------------------------- */
+
+
+/* about section styles */
+.about-section {
+    border-radius: 10px;
+    padding: 130px 150px;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.about-items-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item-description {
+    font-weight: 700;
+}
+
+
+/* footer styles */
+.site-footer {
+    background-color: #181818; /* Darker footer background */
+    color: #B0B0B0;         /* Lighter grey text for footer */
+    text-align: center;
+    padding: 2rem 0; /* Vertical padding, horizontal via .container */
+}
