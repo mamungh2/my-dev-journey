@@ -1,24 +1,12 @@
 body {
     font-family: "Open Sans", sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
 }
 
-/* -------------------------------------------- */
+/* ------------------------------------ */
+
 
 
 /* shared styles */
-.container {
-    max-width: 1140px;
-    /* Standard container width */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    /* Gutters for content */
-    padding-right: 15px;
-}
-
 .btn {
     display: inline-block;
     text-align: center;
@@ -26,6 +14,14 @@ body {
     cursor: pointer;
     white-space: nowrap;
     user-select: none;
+}
+
+.secondary-bg {
+    background-color: #FFF8F3;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .section-title {
@@ -39,19 +35,15 @@ body {
     font-size: 18px;
 }
 
-.text-center {
-    text-align: center;
+.mt-section {
+    margin-top: 130px;
 }
 
-/* ----------------------- */
+/* --------------------------- */
 
 
-.secondary-bg {
-    background-color: #FFF8F3;
-}
 
-
-/* header & navbar styles */
+/* header and navbar styles */
 .site-header {
     background-image: url('../images/developer.png'), url('../images/header_bg.png');
     background-repeat: no-repeat;
@@ -59,53 +51,36 @@ body {
 }
 
 .navbar {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    /* makes the header stick to the top on scroll */
-    top: 0;
-    z-index: 100;
-    /* Ensures header stays above other content */
+    background-color: rgb(205, 248, 248);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     margin: 0 200px;
+    padding: 0 15px;
+    position: sticky;
+    top: 0;
 }
 
-/* ------------------------------------------------------------------ */
-
-
-/* site brand styling */
-.nav-brand a {
+.navbar a {
     text-decoration: none;
 }
 
-.nav-brand h3 {
-    font-weight: 800;
-    font-size: 45px;
+.brand-text {
     color: #181818;
+    font-size: 45px;
+    font-weight: 800;
 }
 
-.nav-brand .brand-letter-highlight {
+.brand-letter-highlight {
     color: #FD6E0A;
+
 }
 
-.nav-brand a:hover h3 {
-    color: #555;
-}
-
-.nav-brand a:hover .brand-letter-highlight {
-    color: darkred;
-}
-
-/* --------------------------------------------- */
-
-
-/* navigation links styling */
 .nav-links {
+    list-style-type: none;
     display: flex;
     align-items: center;
-    list-style-type: none;
 }
 
 .nav-links li {
@@ -113,46 +88,49 @@ body {
 }
 
 .nav-links a {
-    text-decoration: none;
-    font-size: 20px;
     color: #474747;
+    font-size: 20px;
 }
 
-/* ------------------------- */
+/* ---------------------------- */
 
 
+
+/* button styles */
 /* primary button styles */
 .btn-primary {
+    color: white;
     background-color: #FD6E0A;
     font-size: 20px;
     font-weight: 700;
-    color: white;
     padding: 18px 35px;
     border: none;
     border-radius: 5px;
 }
 
-/* -------------------------------- */
-
 /* outline button styles */
 .btn-outline {
     color: #FD6E0A;
     background-color: transparent;
-    border: 2px solid #FD6E0A;
-    border-radius: 5px;
     font-size: 20px;
     font-weight: 700;
     padding: 18px 35px;
+    border: 2px solid #FD6E0A;
+    border-radius: 5px;
 }
 
+/* ----------------------------------- */
+
+
+
 /* banner styles */
-.banner {
+.banner-layout {
     display: flex;
     justify-content: space-between;
     margin: 0 35px 0 200px;
 }
 
-.banner-content {
+.banner-text {
     max-width: 585px;
 }
 
@@ -179,39 +157,39 @@ body {
 /* ------------------------ */
 
 
-/* main styles */
-.site-main {
-    max-width: 1140px;
-    margin: 0 auto;
+
+/* main section styles */
+.site-main section:not(:last-child) {
+    margin-left: 230px;
+    margin-right: 230px;
+
 }
-
-.site-main section {
-    margin-top: 130px;
-    margin-bottom: 130px;
-}
-
-/* ------------------------- */
-
 
 /* about section styles */
 .about-section {
-    border-radius: 10px;
-    padding: 130px 150px;
-    margin-top: 130px;
+    padding: 130px 156px;
+}
+
+.about-content-wrapper {
+    border: 1px solid lightgray;
+    padding: 10px;
+    background-color: white;
 }
 
 .about-items-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
 }
 
 .item-description {
     font-weight: 700;
 }
 
+/* ------------------------------------- */
 
-/* skill container styles */
+
+/* skill section styles */
 .skill-items-container {
     display: flex;
     gap: 24px;
@@ -223,9 +201,12 @@ body {
     box-shadow: 0px 06px 50px 0px rgb(0, 0, 0, .2);
 }
 
+/* ----------------------------------------------------- */
+
+
 
 /* resume section styles */
-.resume-container {
+.resume-layout {
     display: flex;
     gap: 24px;
 }
@@ -234,31 +215,29 @@ body {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
-}
-
-.resume-item-subtitle,
-.resume-item-description {
     color: #757575;
 }
 
-.resume-section hr {
-    margin: 30px 5px;
+.resume-item-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #757575;
+}
+
+.resume-item-separator {
+    margin: 30px 0px;
 }
 
 .resume-download-cv {
     margin-top: 3rem;
 }
 
-
+/* --------------------------- */
 /* contact section styles */
-.contact-section {
-    padding: 130px 230px;
-
-}
-
-.contact-container {
+.contact-layout {
     display: flex;
     gap: 100px;
+    padding: 106px 230px 154px 230px;
 }
 
 .contact-info-column,
@@ -279,17 +258,14 @@ body {
     margin-bottom: 24px;
 }
 
+/* ---------------------------------- */
 
 
-
-
-/* footer styles */
+/* footer section styles */
 .site-footer {
+    color: lightgray;
     background-color: #181818;
-    /* Darker footer background */
-    color: #B0B0B0;
-    /* Lighter grey text for footer */
-    text-align: center;
-    padding: 2rem 0;
-    /* Vertical padding, horizontal via .container */
+    padding: 100px;
 }
+
+/* ----------------END---------------- */
