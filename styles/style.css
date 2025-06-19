@@ -238,6 +238,7 @@ body {
 
 /* -------------------------- */
 
+
 /* contact section styles */
 .contact-section__layout {
     display: flex;
@@ -260,6 +261,7 @@ body {
 }
 
 /* ----------------------------------------- */
+
 
 /* picture section styles */
 .row {
@@ -298,6 +300,22 @@ body {
 
 /* ------------------------------- */
 
+
+/* calender section styles */
+.calender-section__layout {
+    display: grid;
+    grid-template-columns: repeat(7, 25px);
+    row-gap: 2px;
+    column-gap: 2px;
+}
+
+.date {
+    border: 1px solid rebeccapurple;
+    background-color: antiquewhite;
+    height: 25px;
+}
+
+
 /* footer section styles */
 .site-footer {
     color: #757575;
@@ -317,5 +335,9 @@ body {
     .container {
         margin-left: 15px;
         margin-right: 15px;
+    }
+
+    .calender-section__layout {
+        grid-template-columns: repeat(3, 25px);
     }
 }
