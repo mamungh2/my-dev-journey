@@ -142,6 +142,7 @@
             <div class="container">
                 <h3 class="section-title text-center">A summary of My Resume</h3>
                 <div class="resume-section__layout">
+
                     <div class="resume-section__column--education"> <!-- education column -->
                         <h3 class="resume-section__column-title">My Education</h3>
                         <div class="resume-section__item">
@@ -171,6 +172,7 @@
                             </p>
                         </div>
                     </div>
+
                     <div class="resume-section__column--experience"> <!-- experience column -->
                         <h3 class="resume-section__column-title">My Experience</h3>
                         <div class="resume-section__item">
@@ -201,6 +203,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="resume-section__download-cv text-center">
                     <button class="btn btn--primary" type="button">Download CV</button>
                 </div>
@@ -210,6 +213,7 @@
         <section id="contact" class="contact-section mt-130 secondary-bg">
             <div class="container">
                 <div class="contact-section__layout">
+
                     <div class="contact-section__column--info">
                         <h3 class="section-title">Lets Connect</h3>
                         <p class="section-description">Please fill out the form on this section to contact with me or
@@ -221,14 +225,68 @@
                             <img src="images/icons/insta.png" alt="instagram">
                         </div>
                     </div>
+
                     <div class="contact-section__column--form">
                         <h3 class="section-title">Let’s Message me</h3>
                         <form action="" class="contact-section__form">
-                            <input type="text" name="" id="" placeholder="Your name">
-                            <input type="email" name="" id="" placeholder="Your email">
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                            <input onclick="getCoupon()" type="button" value="Submit" class="btn btn--primary">
+                            <fieldset>
+                                <legend>Please fill up this form</legend>
+                                <label for="fname">Your name:</label>
+                                <input type="text" name="fullname" id="fname" placeholder="Your name">
+                                <input type="email" name="" id="" placeholder="Your email">
+                                <label for="country">Your Country:</label>
+                                <select name="Viewers country:" id="country"
+                                    class="contact-section__form__select-place">
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="India">India</option>
+                                    <option value="Pakistan">Pakistan</option>
+                                </select>
+                                <textarea name="Viewers Message" id="" cols="30" rows="10"
+                                    placeholder="Message"></textarea>
+                                <input onclick="getCoupon()" type="submit" value="Submit" class="btn btn--primary">
+                            </fieldset>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="picture-section">
+            <div class="container">
+                <h2>My picture collage</h2>
+                <div class="row">
+                    <img src="./images/row1.jpg" alt="">
+                </div>
+
+                <div class="row">
+                    <img src="./images/nature2.jpg" alt="">
+                    <img src="./images/nature3.jpg" alt="">
+                    <div class="row__two-split">
+                        <img src="./images/nature4.jpg" alt="">
+                        <img src="./images/nature5.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div>
+                        <img src="./images/nature6.jpg" alt="">
+                    </div>
+                    <div class="row__four-split">
+                        <div>
+                            <img src="./images/nature7.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="./images/nature8.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="./images/nature9.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="./images/nature10.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./images/nature11.jpg" alt="">
                     </div>
                 </div>
             </div>
