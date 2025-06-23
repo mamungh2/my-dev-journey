@@ -265,7 +265,7 @@ body {
 
 /* picture section styles */
 .row {
-    height: 50px;
+    height: 400px;
     display: flex;
     gap: 5px;
     margin-bottom: 5px;
@@ -275,6 +275,7 @@ body {
     width: 100%;
     height: 100%;
     min-width: 0;
+    /*it will be test*/
 }
 
 .row__two-split img {
@@ -283,6 +284,7 @@ body {
 
 .row>* {
     flex: 1;
+    /*To give the children of a row the same width*/
 }
 
 .row__four-split {
@@ -290,12 +292,15 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     height: 100%;
+    /*it will be test*/
+    width: 100%;
+    /*it will be test*/
     width: 100%;
     gap: 5px;
 }
 
 .row__four-split>div {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* ------------------------------- */
@@ -315,6 +320,79 @@ body {
     height: 25px;
 }
 
+/* ------------------------------------- */
+
+
+/* multiple-column-section styles */
+.multiple-column-section__layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 20px;
+}
+
+#box-1 {
+    grid-row: span 5;
+}
+
+#box-11,
+#box-12 {
+    grid-column: span 3;
+}
+
+.box {
+    background-color: #acb7ae;
+}
+
+/* ------------------------------- */
+
+/* grid-style-section styles */
+.grid-style-section__header,
+.grid-style-section__nav,
+.grid-style-section__main,
+.sidebar,
+.advertise,
+.grid-style-section__footer {
+    background-color: #acb7ae;
+    border: 1px solid tomato;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.grid-style-section__header {
+    grid-area: grid-style-section__header;
+}
+
+.grid-style-section__nav {
+    grid-area: grid-style-section__nav;
+}
+
+.grid-style-section__main {
+    grid-area: grid-style-section__main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.advertise {
+    grid-area: advertise;
+}
+
+.grid-style-section__footer {
+    grid-area: grid-style-section__footer;
+}
+
+.grid-style-section__layout {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        'grid-style-section__header  grid-style-section__header  grid-style-section__header  grid-style-section__header'
+        'grid-style-section__nav     grid-style-section__main    grid-style-section__main    sidebar'
+        'grid-style-section__nav     grid-style-section__main    grid-style-section__main    advertise'
+        'grid-style-section__footer  grid-style-section__footer  grid-style-section__footer  grid-style-section__footer';
+}
+
 
 /* footer section styles */
 .site-footer {
@@ -326,18 +404,80 @@ body {
 /* ------------------------------- */
 
 
-/* responsive design */
+/* responsive media query design */
 @media screen and (max-width: 576px) {
+    .container {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 0 15px;
+    }
+
+    .navbar__layout,
+    .navbar__links,
+    .skill-section__items,
+    .resume-section__layout,
+    .contact-section__layout,
+    .about-section__items {
+        flex-direction: column;
+    }
+
+    .contact-section__column--info,
+    .contact-section__column--form {
+        width: 100%;
+    }
+
     .banner__layout {
         flex-direction: column;
     }
 
-    .container {
+    .banner__container {
         margin-left: 15px;
-        margin-right: 15px;
+    }
+
+    .banner__profile-pic img,
+    .banner__content {
+        width: 100%;
+    }
+
+    .navbar__links {
+        gap: 15px;
     }
 
     .calender-section__layout {
-        grid-template-columns: repeat(3, 25px);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .row {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .row__four-split {
+        grid-template-columns: 1fr;
+    }
+
+    .multiple-column-section__layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        /*Row height will be automatic according to content.*/
+    }
+
+    #box-1,
+    #box-11,
+    #box-12 {
+        /*Resetting specific spans for desktop*/
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    .grid-style-section__layout {
+        grid-template-areas:
+            'grid-style-section__header'
+            'grid-style-section__nav'
+            'grid-style-section__main'
+            'sidebar'
+            'advertise'
+            'grid-style-section__footer';
+
     }
 }
